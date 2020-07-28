@@ -1,8 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 export const Button = React.memo(({increment, decrement}) => {
 
-    console.log('CallBack')
     return (
         <>
         <button
@@ -21,3 +21,9 @@ export const Button = React.memo(({increment, decrement}) => {
         </>
     )
 })
+
+
+Button.propTypes = {
+    increment: PropTypes.func.isRequired,
+    decrement: PropTypes.func.isRequired,
+};
